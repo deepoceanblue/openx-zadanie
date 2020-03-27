@@ -23,6 +23,6 @@ export class User {
       bs: string;
     }
     // these are not present in the src
-    noOfPosts = 0;
-    closestNeighbourID = null;
+    //noOfPosts = 0;
+    //closestNeighbourID = null;
 }
