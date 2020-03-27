@@ -1,0 +1,14 @@
+a {
+  display: block;
+  padding: 0.3em;
+  margin: 0.4em;
+  text-decoration: none;
+  border-width: 0 0 0 2px; 
+  border-color: lightgrey;
+  border-style: solid;
+}
+
+a:active,
+a:hover {
+  border-color: violet;
+}

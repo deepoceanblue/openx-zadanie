@@ -1,0 +1,17 @@
+a {
+  display: block;
+  text-decoration: none;
+}
+
+details,
+summary,
+label,
+input {
+  padding: 0.3em;
+  margin: 04.em;
+}
+
+li {
+  list-style: none;
+}
+

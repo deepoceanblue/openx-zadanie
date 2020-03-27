@@ -1,0 +1,8 @@
+<ul>
+  <details *ngFor="let u of users">
+    <summary>{{u.name}}</summary>
+    <!-- <p *ngFor="let p of u | keyvalue">{{p.key}}: {{p.value}}</p> -->
+    <p>id: {{u.id}}</p>
+    <p>geo lat: {{u.address.geo.lat}}, lng: {{u.address.geo.lng}}</p>
+  </details>
+</ul>

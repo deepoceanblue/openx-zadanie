@@ -1,0 +1,27 @@
+<!-- <button id="posts-per-user" (click)="listPostsPerUser()">Liczba postów</button> -->
+<details id="posts-per-user" (click)="listPostsPerUser()">
+  <summary>Liczba postów użytkownika</summary>
+  <ul id="postsPerUserMsg">
+    <li *ngFor="let m of postsPerUserMsg">{{m}}</li>
+  </ul>
+</details>
+
+<details id="duplicate-titles" (click)="findDuplicateTitles()">
+<summary>Pokaż duplikaty w tytułach postów</summary>
+<div *ngIf="!duplicateTitles && ifCheckedDuplicateTitles then noDuplicateTitlesMsg; else duplicateTitlesList"></div>
+  <ng-template #noDuplicateTitlesMsg>
+    <p>Wszystkie tytuły postów są unikatowe</p>
+  </ng-template>
+  <ng-template #duplicateTitlesList>
+    <ul id="duplicateTitlesList">
+      <li *ngFor="let d of duplicateTitles">{{d}}</li>
+    </ul>
+  </ng-template>
+</details>
+<select id="closest-user" (change)="findClosestUser($event.target.value)">
+  <option value="default"> --- Wybierz użytkownika -- </option>
+  <option *ngFor="let u of users" value="{{u.id}}">{{u.name}}</option>
+</select>
+
+<label for="current-closest-user">znajduje się najbliżej: </label><input id="current-closest-user" type="text" readonly value="{{currentClosestUser}}"/>
+
