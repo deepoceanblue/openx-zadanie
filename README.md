@@ -5,7 +5,7 @@
 
 tech: JavaScript/TypeScript, Angular
 
-main: `src/app/index.html` 
+main: `src/index.html` 
 
 menu:
 
